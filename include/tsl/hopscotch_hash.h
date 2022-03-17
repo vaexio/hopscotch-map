@@ -421,7 +421,7 @@ template<class ValueType,
          bool StoreHash,
          class GrowthPolicy,
          class OverflowContainer>
-class hopscotch_hash: private Hash, private KeyEqual, private GrowthPolicy {
+class hopscotch_hash: public Hash, public KeyEqual, public GrowthPolicy {
 private:
     template<typename U>
     using has_mapped_type = typename std::integral_constant<bool, !std::is_same<U, void>::value>;

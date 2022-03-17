@@ -657,7 +657,7 @@ public:
 
 
     
-private:
+public:
     ht m_ht;
 };
 
